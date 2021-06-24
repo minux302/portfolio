@@ -1,11 +1,18 @@
-// import Vue from 'vue'
 import {createApp} from 'vue'
 import App from './App.vue'
 import 'animate.css';
 import 'bubbly';
 
-createApp(App).mount('#app')
-// Vue.config.productionTip = false
-// new Vue ({
-//   render: h => h(App),
-// }).$mount('#app')
+const app = createApp(App)
+app.directive ('scroll', {
+  mounted: function (el, binding) {
+    let f = function (evt) {
+      if (binding.value(evt, el)) {
+        window.removeEventListener("scroll", f);
+      }
+    };
+    window.addEventListener("scroll", f);
+  }
+})
+// app.use(VueAnimateOnScroll)
+app.mount('#app')
