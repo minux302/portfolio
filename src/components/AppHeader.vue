@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <div class="logo">
-      <a href="index.html"><img src="../assets/img/logo.png" alt="SNAPPERS"></a>
+      <a href="index.html"><img src="../assets/img/logo.png" alt="KawaiiFestival"></a>
     </div>
   </div>
 </template>
@@ -14,7 +14,8 @@ export default {
 
 <style scoped>
 #header {
-  width: 960;
+  /*width: 960;*/
+  width: 1920px;
   height: 100px;
   margin: 0 auto;
   background-color: #0cbaff;
